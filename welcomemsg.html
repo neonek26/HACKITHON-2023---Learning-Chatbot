@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot</title>
+    <style>
+        /* Styling pro chatovací okno */
+        #chatbox {
+            width: 400px;
+            height: 300px;
+            border: 1px solid #ccc;
+            overflow-y: scroll;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vítej v chatovací aplikaci</h1>
+    <div id="chatbox"></div>
+
+    <script>
+        // Funkce pro odeslání zprávy
+        function sendMessage() {
+            var userInput = document.getElementById("userInput").value;
+            var chatbox = document.getElementById("chatbox");
+
+            // Uživatelova zpráva
+            chatbox.innerHTML += "<p><strong>Ty:</strong> " + userInput + "</p>";
+
+            // Vymaž vstupní pole
+            document.getElementById("userInput").value = "";
+
+            // Pokud je uživatelovo jméno "jméno"
+            if (userInput.toLowerCase() === "jméno") {
+                // Odpověd chatbota s welcome message
+                chatbox.innerHTML += "<p><strong>Chatbot:</strong> Moc rád tě poznávám! Vítej v chatovací aplikaci.</p>";
+            } else {
+                // Standardní odpověď chatbota
+                chatbox.innerHTML += "<p><strong>Chatbot:</strong> Jak se jmenuješ?</p>";
+            }
+        }
+    </script>
+
+    <input type="text" id="userInput" placeholder="Napište zprávu...">
+    <button onclick="sendMessage()">Odeslat</button>
+</body>
+</html>

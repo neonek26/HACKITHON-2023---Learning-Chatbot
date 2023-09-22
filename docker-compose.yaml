@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  
+  pythonflask:
+    container_name: flask_hackaton
+    image: python:latest
+    volumes:
+      - ./src:/flask
+    ports:
+      - 5000:5000

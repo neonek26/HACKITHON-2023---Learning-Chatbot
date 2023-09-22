@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Learning Chatbot</title>
+    <title>Čeština učení AI</title>
     <style>
         .sendMessage
         {
@@ -18,37 +18,37 @@
             background-image: url("https://static.vecteezy.com/system/resources/thumbnails/011/890/770/small/pink-background-with-soft-light-illustration-vector.jpg");
             background-size: cover;
         }
-              /* Styly pro chatovací okno */
-            #chatbox {
-                width: 800px;
-                height: 400px;
-                border: 1px solid #ccc;
-                overflow-y: scroll;
-                text-align: justify;
-                position: absolute;
-                top: 120px;
-                left: 570px;
-            }
+        /* Styly pro chatovací okno */
+        #chatbox {
+            width: 800px;
+            height: 400px;
+            border: 1px solid #ccc;
+            overflow-y: scroll;
+            text-align: justify;
+            position: absolute;
+            top: 120px;
+            left: 570px;
+        }
     </style>
 </head>
 <body>
     <h1>Už to umíme</h1>
     <hr>
-    <p style="text-align: center;">Vítejte v chatroomce pro češtinu.</p>
+    <p style="text-align: center;">Vítejte v už to umíme pro češtinu.</p>
 
     <div id="chatbox">
-        <p><strong>Chatbot:</strong> Ahoj! Jak vám mohu dnes pomoci?</p>
+        <p style="padding:5px;"><strong>Chatbot:</strong> Ahoj! Jak vám mohu dnes pomoci?</p>
     </div>
 
-    <input type="text" id="userInput" placeholder="Napište zprávu..." style="position: absolute; top: 700px;">
-    <button onclick="sendMessage()" style="position: absolute; top: 720px; left: 500px;">Odeslat</button>
+    <input type="text" id="userInput" placeholder="Napište zprávu..." style="position: absolute; top: 530px; left: 570px; width: 300px;">
+    <button onclick="sendMessage()" style="position: absolute; top: 530px; left: 875px;">Odeslat</button>
 
     <script>
         function sendMessage() {
             var userInput = document.getElementById("userInput").value;
             var chatbox = document.getElementById("chatbox");
 
-            chatbox.innerHTML += "<p><strong>Vy:</strong> " + userInput + "</p>";
+            chatbox.innerHTML += "<p><strong> Vy:</strong>" + userInput + "</p>";
 
             document.getElementById("userInput").value = "";
         }
